@@ -16,19 +16,109 @@
     \begin{enumerate}[(a)]
       \item Confirm that titanium undergoes active corrosion under these
         conditions and
+
+        \boxedanswer{
+            Looking at the Pourbaix diagram, \ch{Ti^{2+}} is stable under
+            these conditions, which results in active corrosion.
+        }
+
       \item consult the Pourbaix diagram to suggest three
         different means to provide corrosion protection.
+
+    \boxedanswer{
+        To reduce corrosion, the pH should be increased to at least 4, 
+        so that \ch{TiO2} is stable, enabling passivation. Alternatively,
+        a futher potential of \SI{-1.8}{\volt} should be applied to 
+        stabilize \ch{Ti} metal, making the metal immune.
+    }
+
     \end{enumerate}
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.6\textwidth]{./assets/titanium.png}
+    \end{figure}
+
+
+    \pagebreak
+
   \item If iron is immersed in a solution of pH 3.0, what electrode potential
     must be maintained to prevent the evolution of hydrogen gas, and what
     conditions (describe in detail)?
+
+    \boxedanswer{
+        An electrode potential above \SI{-0.2}{\volt} should be
+        maintained to ensure that hydrogen evolution does not occur.
+        However, this is a corrosive condition, as \ch{Fe^{2+}} is 
+        stable at this pH and potential. 
+    }
+    
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.6\textwidth]{./assets/iron_2.png}
+    \end{figure}
+
+\pagebreak
+
   \item Use the following data for the corrosion of iron in hydrogen-saturdated,
     oxygen-free solution, calculate:
 
     \begin{enumerate}[(a)]
       \item the corrosion rate and
+
       \item the exchange current density for the hydrogen evolution reaction
         (HER) on iron: \par
+
+\boxedanswer{
+\begin{align*}
+\text{Given:}\quad & \text{pH} = 4,\;
+\alpha_{\ch{Fe^{2+}}} = \SI{0.02}{M},\;
+i_{\ch{Fe}}^0 = \SI{9e-7}{\ampere\per\centi\meter\squared} \\
+& b_a = \SI{0.02}{\volt\per decade},\;
+b_c = \SI{-0.12}{\volt\per decade} \\
+& E_{\text{corr}} = \SI{-0.215}{\volt\ vs.\ RHE},\;
+E_{\ch{Fe^{2+}}|\ch{Fe}} = \SI{-0.44}{\volt\ vs.\ SHE}
+\\[0.5em]
+\text{Convert } E_{\ch{Fe^{2+}}|\ch{Fe}} \text{ to RHE:}\quad
+& E_{\text{RHE}} = E_{\text{SHE}} - 0.059\,\text{pH} \\
+& E_{\ch{Fe^{2+}}|\ch{Fe}}^{\text{(RHE)}} = -0.44 - ( -0.236 )
+= \SI{-0.204}{\volt}
+\\[0.5em]
+\text{Anodic overpotential:}\quad
+& \eta_a = E_{\text{corr}} - E_{\text{eq}}
+= -0.215 - (-0.204) = \SI{-0.011}{\volt}
+\\[0.5em]
+\text{Anodic Tafel equation:}\quad
+& \eta_a = b_a \log\!\left(\frac{i_{\text{corr}}}{i_{\ch{Fe}}^0}\right) \\
+\log\!\left(\frac{i_{\text{corr}}}{9\times10^{-7}}\right)
+&= \frac{-0.011}{0.02} = -0.55 \\
+\Aboxed{
+i_{\text{corr}} &= 9\times10^{-7}\times10^{-0.55}
+= \SI{2.5e-7}{\ampere\per\centi\meter\squared}}
+\\[1em]
+\text{(a) Corrosion rate:}\quad
+& \text{EW}_{\ch{Fe}} = \frac{55.845}{2} = \SI{27.923}{\gram\per\equiv} \\
+& \rho_{\text{Fe}} = \SI{7.87}{\gram\per\centi\meter\cubed},\;
+K = \SI{3.27e-3}{\milli\meter\per\year\per\milli\ampere\per\centi\meter\squared} \\
+\text{CR} &= K \frac{i_{\text{corr}}\,\text{EW}}{\rho} \\
+\text{CR} &= 3.27\times10^{-3}
+\frac{(2.5\times10^{-4})(27.923)}{7.87} \\
+\Aboxed{\text{CR} &= \SI{3.0e-6}{\milli\meter\per\year}}
+\\[1em]
+\text{(b) Exchange current density for HER:}\quad
+& E_{\text{eq, HER}} = \SI{0}{\volt\ vs.\ RHE} \\
+\eta_c &= E_{\text{corr}} - E_{\text{eq, HER}}
+= \SI{-0.215}{\volt} \\
+\eta_c &= b_c \log\!\left(\frac{i_{\text{corr}}}{i_0^{\text{HER}}}\right) \\
+\log\!\left(\frac{i_{\text{corr}}}{i_0^{\text{HER}}}\right)
+&= \frac{-0.215}{-0.12} = 1.79 \\
+\Aboxed{
+i_0^{\text{HER}}
+= \frac{2.5\times10^{-7}}{10^{1.79}}
+= \SI{4.1e-9}{\ampere\per\centi\meter\squared}}
+\end{align*}
+}
+
     \end{enumerate}
     pH = 4, $\alpha_{\ch{Fe^{2+}}} = \SI{0.02}{M}, i_{\ch{Fe}}^O
     = \SI{9e-7}{\ampere\per\centi\meter\squared}$; anodic
@@ -36,6 +126,10 @@
     potential of iron is \SI{-0.215}{\volt} vs RHE and
     $e_{\ch{Fe^{2+}}|\ch{Fe}} = \SI{-0.44}{\volt}$ vs. SHE. For the HER
     , the cathodic $d\eta / d(\log i) = \SI{-0.12}{\volt\per decade}$.
+
+
+\pagebreak
+
   \item Iron corrodes in a solution saturated with oxygen. The pH of
     the solution
     is 7 and the partial pressure of oxygen is \SI{1}{atm}.
@@ -45,6 +139,53 @@
       \item Calculate the protection current required to reduce the corrosion
         current to zero.
     \end{enumerate}
+
+\boxedanswer{
+\begin{align*}
+  \text{Anodic reaction: } 
+   & \ch{Fe -> Fe^{2+} + 2e^-} \\
+  \text{Cathodic reaction:} \quad &\ch{O2 + 2H2O + 4e^- -> 4OH^-} \\
+  \text{Exchange current densities:} \quad
+  &i_{\ch{Fe}}^0 = \SI{1e-5}{\ampere\per\centi\meter\squared}, \quad
+  i_{\ch{OH}}^0 = \SI{1e-6}{\ampere\per\centi\meter\squared} \\
+  \text{Tafel slopes:} \quad
+  &b_a = \SI{0.08}{\volt\per decade}, \quad
+  b_c = \SI{0.11}{\volt\per decade} \\
+  \text{At corrosion potential:} \quad
+  &i_a = i_c = i_{\text{corr}} \\
+  \text{Tafel equations:} \quad
+  &\eta_a = b_a \log\!\left(\frac{i_{\text{corr}}}{i_{\ch{Fe}}^0}\right) \\
+  &\eta_c = -b_c \log\!\left(\frac{i_{\text{corr}}}{i_{\ch{OH}}^0}\right) \\
+  \text{At mixed potential:} \quad
+  &\eta_a + \eta_c = 0 \\
+  b_a \log\!\left(\frac{i_{\text{corr}}}{i_{\ch{Fe}}^0}\right)
+  &=
+  b_c \log\!\left(\frac{i_{\text{corr}}}{i_{\ch{OH}}^0}\right) \\
+  \frac{b_a}{b_c}
+  &=
+  \frac{\log(i_{\text{corr}}/i_{\ch{OH}}^0)}
+       {\log(i_{\text{corr}}/i_{\ch{Fe}}^0)} \\
+  \frac{0.08}{0.11}
+  &=
+  \frac{\log(i_{\text{corr}}/10^{-6})}
+       {\log(i_{\text{corr}}/10^{-5})} \\
+  \Aboxed{i_{\text{corr}} &\approx \SI{3.2e-6}{\ampere\per\centi\meter\squared}} \\
+  \text{Corrosion potential:} \quad
+  &E_{\text{corr}} = E_{\ch{Fe}}^0 +
+  b_a \log\!\left(\frac{i_{\text{corr}}}{i_{\ch{Fe}}^0}\right) \\[6pt]
+  E_{\text{corr}} - E_{\ch{Fe}}^0
+  &=
+  0.08 \log\!\left(\frac{3.2 \times 10^{-6}}{10^{-5}}\right) \\[6pt]
+  \Aboxed{E_{\text{corr}} - E_{\ch{Fe}}^0 &\approx \SI{-0.04}{\volt}} \\[18pt]
+  &\textbf{(b) Protection current} \\[6pt]
+  \text{To fully suppress corrosion:} \quad
+  &i_{\text{prot}} = i_{\text{corr}} \\[6pt]
+  \Aboxed{i_{\text{prot}} &=
+  \SI{3.2e-6}{\ampere\per\centi\meter\squared}}
+\end{align*}
+}
+
+
     Additional information:
 
     \begin{align*}
@@ -55,15 +196,92 @@
       i_{\ch{OH}}^O &= \SI{e-6}{\ampere\per\centi\meter\squared}
     \end{align*}
 
+\pagebreak
+
   \item Calculate the corrosion potential, corrosion current, and protection
     current needed to stop corrosion for cadmium in a corrosive
     deaerated medium.
 
+\boxedanswer{
+\begin{align*}
+  \text{Anodic reaction:} \quad & \ch{Cd -> Cd^{2+} + 2e^-} \\
+  \text{Cathodic reaction (deaerated):} \quad & \ch{2H^+ + 2e^- -> H2}
+\end{align*}
+
+\begin{align*}
+  \text{Equilibrium potential of Cd:} \quad
+  E_{\ch{Cd}} &=
+  E^\circ_{\ch{Cd^{2+}/Cd}} + \frac{0.059}{2}\log[\ch{Cd^{2+}}] \\
+  &= -0.403 + \frac{0.059}{2}\log(10^{-5}) \\
+  &= -0.403 - 0.148 \\
+  \Aboxed{E_{\ch{Cd}} &= \SI{-0.551}{\volt}\ \text{vs. SHE}}
+\end{align*}
+
+\begin{align*}
+  \text{Hydrogen equilibrium potential (pH = 1):} \quad
+  E_{\ch{H}} &= 0 - 0.059(\text{pH}) \\
+  \Aboxed{E_{\ch{H}} &= \SI{-0.059}{\volt}\ \text{vs. SHE}}
+\end{align*}
+
+\begin{align*}
+  \text{Anodic Tafel equation:} \quad
+  E &= E_{\ch{Cd}} + b_a \log\!\left(\frac{i}{i_0}\right) \\
+  \text{Cathodic Tafel equation:} \quad
+  E &= E_{\ch{H}} + b_c \log\!\left(\frac{i}{i_0}\right)
+\end{align*}
+
+\begin{align*}
+  \text{At corrosion:} \quad
+  E_{\text{corr}}^{(a)} &= E_{\text{corr}}^{(c)}, \quad i = i_{\text{corr}} \\
+  E_{\ch{Cd}} + b_a \log\!\left(\frac{i_{\text{corr}}}{i_0}\right)
+  &= E_{\ch{H}} + b_c \log\!\left(\frac{i_{\text{corr}}}{i_0}\right)
+\end{align*}
+
+\begin{align*}
+  (E_{\ch{Cd}} - E_{\ch{H}})
+  &= (b_c - b_a)\log\!\left(\frac{i_{\text{corr}}}{i_0}\right) \\
+  (-0.551 + 0.059)
+  &= (-0.125 - 0.100)\log\!\left(\frac{i_{\text{corr}}}{10^{-3}}\right) \\
+  -0.492 &= -0.225 \log\!\left(\frac{i_{\text{corr}}}{10^{-3}}\right)
+\end{align*}
+
+\begin{align*}
+  \log\!\left(\frac{i_{\text{corr}}}{10^{-3}}\right) &= 2.19 \\
+  \Aboxed{i_{\text{corr}} &\approx \SI{1.6e-1}{\ampere\per\centi\meter\squared}}
+\end{align*}
+}
+
+\boxedanswer{
+
+\begin{align*}
+  \text{Corrosion potential:} \quad
+  E_{\text{corr}} &= E_{\ch{Cd}} + b_a \log\!\left(\frac{i_{\text{corr}}}{i_0}\right) \\
+  &= -0.551 + 0.100(2.19) \\
+  \Aboxed{E_{\text{corr}} &\approx \SI{-0.33}{\volt}\ \text{vs. SHE}}
+\end{align*}
+
+\begin{align*}
+  \text{Protection condition:} \quad
+  E &= E_{\ch{Cd}} = \SI{-0.551}{\volt} \\
+  E_{\ch{Cd}} &= E_{\ch{H}} + b_c \log\!\left(\frac{i_p}{i_0}\right)
+\end{align*}
+
+\begin{align*}
+  -0.551 &= -0.059 - 0.125\log\!\left(\frac{i_p}{10^{-3}}\right) \\
+  -0.492 &= -0.125\log\!\left(\frac{i_p}{10^{-3}}\right)
+\end{align*}
+
+\begin{align*}
+  \log\!\left(\frac{i_p}{10^{-3}}\right) &= 3.94 \\
+  \Aboxed{i_p &\approx \SI{8.7}{\ampere\per\centi\meter\squared}}
+\end{align*}
+}
+
     Additional information:
 
     \begin{align*}
-      [\ch{Cd^{2+}}] = \SI{e-5}{M} & pH &=  1 & a_c &=
-      \SI{-0.360}{\volt} vs. SHE \\
+        [\ch{Cd^{2+}}] &= \SI{e-5}{M} & pH &=  1 & a_c &=
+      \SI{-0.360}{\volt} \text{ vs. } SHE \\
       b_a &= \SI{0.100}{\volt\per decade} & b_c &=
       \SI{-0.125}{\volt\per decade} & i_{\ch{Cd}}^O &=
       \SI{e-3}{\ampere\per\centi\meter\squared} \\
