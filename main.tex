@@ -1,0 +1,73 @@
+\input{./src/main.sty}
+% Additional SI unit for Fahrenheit
+\DeclareSIUnit\fahrenheit{\degree F}
+\sisetup{range-phrase = --}
+\sisetup{range-units = single}
+
+\begin{document}
+
+% Include title page
+\input{./src/titlepage.tex}
+
+\begin{enumerate}
+  \item The electrode potential of titanium immersed in a sulfuric
+    acid solution of pH approximately 1 was
+    measured to be \SI{-0.70}{\volt} vs. SCE
+    \begin{enumerate}[(a)]
+      \item Confirm that titanium undergoes active corrosion under these
+        conditions and
+      \item consult the Pourbaix diagram to suggest three
+        different means to provide corrosion protection.
+    \end{enumerate}
+  \item If iron is immersed in a solution of pH 3.0, what electrode potential
+    must be maintained to prevent the evolution of hydrogen gas, and what
+    conditions (describe in detail)?
+  \item Use the following data for the corrosion of iron in hydrogen-saturdated,
+    oxygen-free solution, calculate:
+
+    \begin{enumerate}[(a)]
+      \item the corrosion rate and
+      \item the exchange current density for the hydrogen evolution reaction
+        (HER) on iron: \par
+    \end{enumerate}
+    pH = 4, $\alpha_{\ch{Fe^{2+}}} = \SI{0.02}{M}, i_{\ch{Fe}}^O
+    = \SI{9e-7}{\ampere\per\centi\meter\squared}$; anodic
+    $d\eta / d(\log i) = \SI{0.02}{\volt\per decade}$; the corrosion
+    potential of iron is \SI{-0.215}{\volt} vs RHE and
+    $e_{\ch{Fe^{2+}}|\ch{Fe}} = \SI{-0.44}{\volt}$ vs. SHE. For the HER
+    , the cathodic $d\eta / d(\log i) = \SI{-0.12}{\volt\per decade}$.
+  \item Iron corrodes in a solution saturated with oxygen. The pH of
+    the solution
+    is 7 and the partial pressure of oxygen is \SI{1}{atm}.
+    \begin{enumerate}[(a)]
+      \item Calculate the corrosion current and corrosion potential of the
+        system.
+      \item Calculate the protection current required to reduce the corrosion
+        current to zero.
+    \end{enumerate}
+    Additional information:
+
+    \begin{align*}
+      [\ch{Fe}] &= \SI{0.7}{m} &\mathrm{pH} &= 7 &P_{\ch{O_2}} &= \SI{1}{atm} \\
+      b_a &= \SI{0.08}{\volt\per decade} & b_c &=
+      \SI{-0.11}{\volt\per decade} \\
+      i_{\ch{Fe}}^O &= \SI{e-5}{\ampere\per\centi\meter\squared} &
+      i_{\ch{OH}}^O &= \SI{e-6}{\ampere\per\centi\meter\squared}
+    \end{align*}
+
+  \item Calculate the corrosion potential, corrosion current, and protection
+    current needed to stop corrosion for cadmium in a corrosive
+    deaerated medium.
+
+    Additional information:
+
+    \begin{align*}
+      [\ch{Cd^{2+}}] = \SI{e-5}{M} & pH &=  1 & a_c &=
+      \SI{-0.360}{\volt} vs. SHE \\
+      b_a &= \SI{0.100}{\volt\per decade} & b_c &=
+      \SI{-0.125}{\volt\per decade} & i_{\ch{Cd}}^O &=
+      \SI{e-3}{\ampere\per\centi\meter\squared} \\
+    \end{align*}
+\end{enumerate}
+
+\end{document}
